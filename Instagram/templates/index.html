@@ -2,5 +2,13 @@
 {% load bootstrap3 %}
 
 {% block content %}
+<div class="container">
+{% for x in posts %}
+<p>{{ x.author }}</p>
+<p>{{ x.comment }}</p>
+<p>{{ x.image }}</p>
+<p>{{ x.caption }}</p>
+{% endfor %}
+</div>
 
 {% endblock %}
