@@ -41,10 +41,20 @@
             <!-- insta icons to the right -->
 
             <span class="pull-right">
+                
+            </span>
+
+            <span class="pull-right">
+                {% if user.is_authenticated %}
                 <div class="instaicon disc"></div>
                 <div class="instaicon like"></div>
                 <i class="fa fa-heart fa-3x"></i>
                 <a href="#" class="instaicon pers"></a>
+                
+                {% else %}
+                <a href="{% url 'login' %}" class="nav-item-nav-link">Login</a>
+                <a href="{% url 'register' %}" class="nav-item-nav-link">SignUp</a>
+                {% endif %}
             </span>
     </nav>
 
