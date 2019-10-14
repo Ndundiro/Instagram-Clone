@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="container">
+
+    <img src="{{ object.author.profile.image.url }}"  class="rounded-circle">
+
+    <p>{{object.caption }}</p>
+    <p>{{object.user }}</p>
+    <p>{{object.date_posted|date:"F d, Y"}}</p>
+   
+    </div>
+
+{% endblock content %}
