@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags%}
 {% block content%}
 <div class="content-section">
     <form method="post">
         {% csrf_token %}
-        {{form.as_p}}
+        {{ form|crispy }}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Join TOday</legend>
 
@@ -14,7 +15,7 @@
     </form>
     <div class="border-top-pt-3">
         <small class="text-muted">
-        Already have an account? <a href="#" class="ml-2">Sign In</a>
+        Already have an account? <a href="{% url 'login' %}" class="ml-2">Sign In</a>
     </small>
     </div>
 </div>
