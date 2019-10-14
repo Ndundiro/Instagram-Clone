@@ -11,7 +11,8 @@
    
     <img src="{{ x.image.url }}"  class="one rounded-circle">
     <p>{{ x.user }}</p>
-    <p>{{ x.date_posted|date:"F d, Y"}}</p>
+    <p>{{ x.date_posted|timesince}}</p>  
+    <!-- # date:"F d, Y" -->
     <p>{{ x.caption }}</p>
     {% endfor %}
 </div>
