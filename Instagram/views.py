@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post
-from django.views.generic import  ListView,DetailView
+from django.views.generic import  ListView,DetailView, CreateView
 
 # Create your views here.
 
@@ -16,6 +16,16 @@ class PosListView(ListView):
     template_name = 'index.html'  #<app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
+
+
+class PostCreateView(CreateView):
+    model = Post
+    fields = ['caption']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 
 class PostDetailView(DetailView):
