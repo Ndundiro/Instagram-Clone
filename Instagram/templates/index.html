@@ -3,12 +3,13 @@
 
 {% block content %}
 <div class="container">
+        <img src="{{ x.author.profile.image.url }}" class="rounded-circle">
     {% for x in posts %}
     <h2>
         <a href="{% url 'post-detail' x.id %}" class="article-title">{{ x.caption }}</a>
     </h2>
-    <img src="{{ x.author.profile.image.url }}" class="rounded-circle">
-
+   
+    <img src="{{ x.image.url }}"  class="one rounded-circle">
     <p>{{ x.user }}</p>
     <p>{{ x.date_posted|date:"F d, Y"}}</p>
     <p>{{ x.caption }}</p>
