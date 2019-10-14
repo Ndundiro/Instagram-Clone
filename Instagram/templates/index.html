@@ -4,9 +4,8 @@
 {% block content %}
 <div class="container">
 {% for x in posts %}
-<p>{{ x.author }}</p>
-<p>{{ x.comment }}</p>
-<p>{{ x.image }}</p>
+<p>{{ x.user }}</p>
+<p>{{ x.date_posted|date:"F d, Y"}}</p>
 <p>{{ x.caption }}</p>
 {% endfor %}
 </div>
