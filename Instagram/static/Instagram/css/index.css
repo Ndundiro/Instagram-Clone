@@ -6,3 +6,40 @@
     width: 300px;
     height: auto
 }
+
+.icon{
+        width: 180px;
+        height: auto
+}
+.insta-icon{
+margin-top: 10px;
+}
+
+.vr {
+    border-left: 2px solid black;
+    height: 800px;
+  }
+
+.instaicon{
+    display: inline-block;
+    background-image: url(/static/images/instagram.png);
+    padding:0px;
+}
+
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+
+
+.instaicon{
+    display: inline-block;
+    background-image: url(/static/images/instagram.png);
+    padding:0px;
+}
+.instaglyph{
+    display: inline-block;
+    background-image: url(/static/images/868a059b8fc8.png);
+    margin:8px;
+}

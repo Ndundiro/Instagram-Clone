@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+
+
+<div class="media row">
+
+    <div class="col-md-5">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+    </div>
+
+
+    <div class="col-md-7 mt-3">
+            <div class="media-body">
+                <div class="account-heading">
+
+                    <span class="mr-3 text-secondary username">{{ user.username }}</span>
+
+                    <a href="{% url 'profile' %}"class="btn btn-sm btn-outline-secondary mr-3"><strong>Edit Profile</strong></a>
+
+                    <a class="mt-3"><i class="fa fa-cog fa-3x mt-3"></i></a>
+                
+                </div>
+
+                <div class="post-details mt-3 mb-3">
+                    <span class="mr-5"><strong>{{posts.count}}</strong> Posts</span>
+                    <span class="mr-5"> <strong>0</strong> followers</span>
+                    <span class="mr-5"> <strong> 0 </strong> following</span>
+                </div>
+
+                <p class="text-secondary">{{ user.profile.bio }}</p>
+            </div>
+        </div>
+
+  
+</div>
+
+<!-- 
+
+
+<div class="media-body col-md-7">
+
+        <div class="row m-4">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <a href="" class="btn">Edit Profile</a>
+            <i class="fas fa-cog fa-3x"></i>
+        </div>
+
+        <div class="row m-4">
+            <p>{{posts.count}} posts</p>
+            <p>Followers</p>
+            <p>Following</p>
+        </div>
+
+        <div class="row m-5">
+            <p class="text-secondary">{{ user.profile.bio }}</p>
+        </div>
+    </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    {% for post in posts %}
+    <div class="card mb-4 mt-4">
+        <div class="card-body">
+            <div class="card-text">
+                <a href="{% url 'post-detail' post.id %}" class="article-title">
+                    <div style="background-image: url({{ post.image.url}});background-size: contain;position: sticky">
+                        <img src="{{ post.image.url }}" style="visibility: hidden;" width="100%" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

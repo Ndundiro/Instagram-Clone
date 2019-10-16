@@ -1,20 +1,65 @@
 {% extends 'base.html' %}
 {% load bootstrap3 %}
-
+{% load static %}
 {% block content %}
+
 <div class="container">
-        <img src="{{ x.author.profile.image.url }}" class="rounded-circle">
-    {% for x in posts %}
-    <h2>
-        <a href="{% url 'post-detail' x.id %}" class="article-title">{{ x.caption }}</a>
-    </h2>
-   
-    <img src="{{ x.image.url }}"  class="one rounded-circle">
-    <p>{{ x.user }}</p>
-    <p>{{ x.date_posted|timesince}}</p>  
-    <!-- # date:"F d, Y" -->
-    <p>{{ x.caption }}</p>
+    <!-- profile pic -->
+<div class="col-md-8">
+    {% for post in posts %}
+    
+    <div class="card mb-4 mt-4">
+        <div class="card-title">
+            <strong>
+                <h2 class="m-3">{{ post.user }}</h2>
+            </strong>
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <a href="{% url 'post-detail' post.id %}" class="article-title">
+                    <div style="background-image: url({{ post.image.url}});background-size: contain;position: sticky">
+                        <img src="{{ post.image.url }}" style="visibility: hidden;" width="100%" />
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="ml-4">
+            <a class='info' href="{% url 'likePost' post.pk %}">
+
+                {%if post.likes.id == user.id%}
+                <i class="far fa-heart fa-3x"></i>
+                {%else%}
+                <i class="far fa-heart fa-3x"></i>
+                {%endif%}
+            </a>
+            <span style="font-size:25px;">{{post.likes.count}}</span>
+
+            <i class="far fa-comment fa-3x ml-5"></i>
+            <p>{{ post.caption }}</p>
+            <p>{{ post.date_posted|timesince}} AGO</p>
+        </div>
+    </div>
+
     {% endfor %}
 </div>
 
+<div class="col-md-4">
+
+        <div class="row">
+                <img class="col-md-6 rounded-circle account-img" src="{{ user.profile.image.url }}">
+                <span class="col-md-6 mt-5  text-secondary username" >
+                    <h1>{{ user.username }}</h1>
+                </span>
+            </div>
+
+    <div  class="m-5 row" >
+        <a href="{% url 'post-create' %}" style="color: black">
+        <i class="fas fa-upload fa-10x"></i>
+        <h1 class="">Upload</h1>
+    </a>
+    </div>
+</div>
+
+</div>
 {% endblock %}

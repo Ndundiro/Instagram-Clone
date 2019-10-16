@@ -3,13 +3,17 @@
 
 {% block content %}
 <div class="container">
-
-    <img src="{{ object.image.url }}"   class=" one rounded-circle">
-
-    <p>{{object.caption }}</p>
-    <p>{{object.user }}</p>
-    <p>{{object.date_posted|date:"F d, Y"}}</p>
-   
+    <div class="col-md-6">
+        <img src="{{ object.image.url }}" class=" one">
     </div>
+
+    <div class="col-md-6">
+        <h1>Photo Caption:{{object.caption }}</h1>
+        <h1>Posted by:{{object.user }}</h1>
+        <h1>Photo Posted on: {{object.date_posted|date:"F d, Y"}}</h1>
+    </div>
+</div>
+
+</div>
 
 {% endblock content %}
