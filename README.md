@@ -1,66 +1,86 @@
-### Instagram-Clone
-### Description
-##### Instagram-Clone is a platform  where users can display their photos for others to see, they can also see other peoples photos.They can like and comment on the post as well.
-### Author
+## Instagram-Clone
+
+## Author
 Ndundiro Kamau 
-### Screenshot
-<img src=" " width="1000">
-### Requirements
-##### These are the requirements you need to get the project running locally on your machine:
-  - Text Editor
-  - Install python3
-  - Install and activate virtual
-  - Setup Database
-  - Install Django
-### Installation Process
-##### Download any text editor of your choice, either Sublime, Visual-Studio-Code or Atom.
-##### Install your preferred version of python
-  - ```sudo apt-get install python3.6```.
-  - ```python --version``` to confirm that python has been installed.
-##### Open the command-line and run the following command to open a directory:
-  - ```cd your preferred directory``` => ```cd Desktop```
-##### Git clone the project on your current directory by:
-  - ```git clone https://github.com/Ndundiro/Instagram-Clone``.
-##### Open the project on your terminal:
-  - ```atom . or code .``` , according to the type of your text editor.
-##### Move to your project directory:
-  - ```cd Gallery```.
-##### Install virtual environment using python:
-  - ```python3.6 -m venv virtual```, check your project to confirm you have a folder called virtual,
-  - then activate it by running ```source virtual/bin/activate```
-##### To install the packages in the ```requirements.txt file```,
-  - ```pip install -r requirements.txt```  That will install all packages including Django.
-##### To open python shell:
-  - ```python3.6``` ,
-  - ```import django```
-  - And lastly ```django.get_version()``` to see and confirm the version of django installed.
-  - You can then ```ctrl z``` to get out of the shell,
-##### After confirming you have all this
-  - ```python3 manage.py runserver``` to run the project.
-  - Then click the local host link given to open the project on a browser ```http://127.0.0.1:8000/```.
-#### For more information read the following django and python documentation:
-  - [DjangoDocumentation](https://docs.djangoproject.com/en/1.11/intro/install/)
-  - [PythonDocumentation](https://www.python.org/doc/)
-### User Stories
-##### As a user, I would like to view different photos that interest me.
-##### As a user, I would like to click on a single photo to expand it and also view the details of the photo.
-##### As a user, I would like to search for different categories of photos.
-##### As a user, I would like to copy a link to the photo to share with my friends.
-##### As a user, I would like to view photos based on the location they were taken.
-### Behavior Driven Development
-##### The application should display photos.
-##### When a user clicks on a photo, the photo should expand and the details of the photo to be displayed on a modal within the main page.
-##### When a user enters a search term on the search input and submits it, then they should be able to get a result of what they are looking for or if the term does not exist, they should get a message to inform them.
-##### When a user clicks on the copy button, then they should be able to have the image link copied to their machine clipboard.
-### Technologies Used
-##### Python
-##### Django
-##### PostgreSQL
-##### HTML5
-##### CSS3
-## Dependencies
-##### Postgresql
-### Licence
-[MIT](LICENSE)
-### Contact
-##### Ndundirokamau@gmail.com
+
+## Decription
+Instagram-Clone is a platform  where users can share their images for other people.The image can be liked and commented on.Users can follow other users and also get followed by other users.
+
+## Screenshot
+<img src="https://github.com/Ndundiro/Instagram-Clone/blob/master/instascreenshot.png" width="1000">
+
+## Live Link 
+[lick here](https://insta159.herokuapp.com/) view the live site.
+
+## SetUp/Installations
+1. Download the zip file of the project or Clone the repository using the following command:
+git clone ```https://github.com/Ndundiro/Instagram-Clone
+
+Navigate to the project directory
+cd IP
+
+2. Virtual Environment
+Install virtualenv  using pip:  
+```python3.6 -m venv virtual```  
+Proceed to activate the virtual environment   
+```source virtual/bin/activate```
+
+3. Install packages/dependancies  
+Install the packages in the requirements.txt file:  
+```pip install -r requirements.txt```
+
+4. Create a database
+Create a new postgress database,Type the following command  
+psql  
+Run the following command,it creates a new database named gallery1  
+```#create database insta```
+
+5. Create Database migrations
+run the following command:    
+ ```python3 manage.py makemigrations insta```
+followed by:    
+ ```python3 manage.py migrate```
+
+6. Run the app
+To run the application:  
+```python3 manage.py runserver``` 
+
+Open  the link http://127.0.0.1:8000/  in a browser.
+
+7. To run tests:  
+```python3 manage.py test```
+
+For more Information,Read the following documents:
+
+* [DjangoDocumentation](https://docs.djangoproject.com/en/1.11/)
+* [PythonDocumentation](https://docs.python.org/3.6/)
+
+User Story
+Sign in to the application to start using.
+Upload a pictures to the application.
+Search for different users using their usernames.
+See your profile with all your pictures.
+Follow other users and see their pictures on my timeline.
+
+
+## Bugs
+There are no known bugs yet
+
+## Technologies Used
+* Python3.6
+* Django 2.20
+* PostgreSQL
+* HTML5
+* CSS3
+* Heroku
+
+### Dependencies
+* Postgresql
+
+## Support and Contact Details
+For any comments,suggestions,feedback or inquiries, contact me via email: ndundirokamau@gmail.com
+
+## License
+[MIT License](https://github.com/Ndundiro/Instagram-CloneICENSE)
+
+Copyright © 2019 Ndundiro Kamau
