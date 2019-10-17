@@ -12,7 +12,12 @@ class Post(models.Model):
 
     def total_likes(self):
        self.likes.count()
+
+    def save_post(self):
+        self.save()
     
+    def delete_post(self):
+        self.delete()
     
     def __str__(self):
         return self.caption
