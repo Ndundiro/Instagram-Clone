@@ -14,10 +14,10 @@ Instagram-Clone is a platform  where users can share their images for other peop
 
 ## SetUp/Installations
 1. Download the zip file of the project or Clone the repository using the following command:
-git clone ```https://github.com/Ndundiro/Instagram-Clone
+git clone ```https://github.com/Ndundiro/Instagram-Clone```
 
 Navigate to the project directory
-cd IP
+```cd INSTA-AP```
 
 2. Virtual Environment
 Install virtualenv  using pip:  
