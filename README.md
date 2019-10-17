@@ -81,6 +81,6 @@ There are no known bugs yet
 For any comments,suggestions,feedback or inquiries, contact me via email: ndundirokamau@gmail.com
 
 ## License
-[MIT License](https://github.com/Ndundiro/Instagram-CloneICENSE)
+[MIT License](https://github.com/Ndundiro/Instagram-Clone/blob/master/LICENSE)
 
 Copyright © 2019 Ndundiro Kamau
